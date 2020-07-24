@@ -165,7 +165,7 @@ async def call_apropriate_function(
                 None
             )
         else:
-            return False, "can't get metadata \n\n#stopped"
+            return False, "<b>can't get metadata </b>\n Please Check The Link That You Provided\n\n#stopped"
     await asyncio.sleep(1)
     file = aria_instance.get_download(err_message)
     to_upload_file = file.name
@@ -229,7 +229,7 @@ async def call_apropriate_function(
         message_to_send += "</a>"
         message_to_send += "\n"
     if message_to_send != "":
-        mention_req_user = f"<a href='tg://user?id={user_id}'>Your Requested Files</a>\n\n"
+        mention_req_user = f"<a href='tg://user?id={user_id}'>⏩Here Is Your Requested Files📂</a>\n\n"
         message_to_send = mention_req_user + message_to_send
         message_to_send = message_to_send + "\n\n" + "#uploads"
     else:
@@ -282,7 +282,7 @@ async def call_apropriate_function_g(
                 None
             )
         else:
-            return False, "can't get metadata \n\n#stopped"
+            return False, "<b>can't get metadata</b> \n\n#stopped"
     await asyncio.sleep(1)
     file = aria_instance.get_download(err_message)
     to_upload_file = file.name
@@ -384,14 +384,14 @@ async def call_apropriate_function_t(
         message_id = final_response[key_f_res_se]
         channel_id = str(AUTH_CHANNEL)[4:]
         private_link = f"https://t.me/c/{channel_id}/{message_id}"
-        message_to_send += "👉 <a href='"
+        message_to_send += "🚪 <a href='"
         message_to_send += private_link
         message_to_send += "'>"
         message_to_send += local_file_name
         message_to_send += "</a>"
         message_to_send += "\n"
     if message_to_send != "":
-        mention_req_user = f"<a href='tg://user?id={user_id}'>Your Requested Files</a>\n\n"
+        mention_req_user = f"<a href='tg://user?id={user_id}'>⏩Here Is Your Requested Files📂</a>\n\n"
         message_to_send = mention_req_user + message_to_send
         message_to_send = message_to_send + "\n\n" + "#uploads"
     else:
@@ -425,10 +425,10 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
                 except:
                     pass
                 #
-                msg = f"\nDownloading File: `{downloading_dir_name}`"
-                msg += f"\nSpeed: {file.download_speed_string()} 🔽 / {file.upload_speed_string()} 🔼"
-                msg += f"\nProgress: {file.progress_string()}"
-                msg += f"\nTotal Size: {file.total_length_string()}"
+                msg = f"\n<b>📥Downloading File:</b> `{downloading_dir_name}`"
+                msg += f"\n<b>🚀Speed:</b> {file.download_speed_string()} ⏬ / {file.upload_speed_string()} ⏫"
+                msg += f"\n<b>🎨Progress:</b> {file.progress_string()}"
+                msg += f"\n<b>🍃Total Size:</b> {file.total_length_string()}"
 
                 if is_file is None :
                    msg += f"\n<b>Connections:</b> {file.connections}"
@@ -451,12 +451,12 @@ async def check_progress_for_dl(aria2, gid, event, previous_message):
             await check_progress_for_dl(aria2, gid, event, previous_message)
         else:
             await asyncio.sleep(EDIT_SLEEP_TIME_OUT)
-            await event.edit(f"File Downloaded Successfully: `{file.name}`")
+            await event.edit(f"<b>File Downloaded Successfully:</b> `{file.name}`")
             return True
     except Exception as e:
         LOGGER.info(str(e))
         if " not found" in str(e) or "'file'" in str(e):
-            await event.edit("Download Canceled :\n`{}`".format(file.name))
+            await event.edit("<b>Download Canceled:</b>\n`{}`".format(file.name))
             return False
         elif " depth exceeded" in str(e):
             file.remove(force=True)
