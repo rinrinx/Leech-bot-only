@@ -36,13 +36,13 @@ async def rename_message_f(client, message):
     inline_keyboard = []
     inline_keyboard.append([
         pyrogram.InlineKeyboardButton(
-            text="read this?",
-            url="https://t.me/keralagram/698909"
+            text="Rename bots",
+            url="https://t.me/Mai_bOTs/17"
         )
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "please use @renamebot",
+        "please check @Mai_bOTs",
         quote=True,
         reply_markup=reply_markup
     )
@@ -56,7 +56,7 @@ async def help_message_f(client, message):
     ])
     reply_markup = pyrogram.InlineKeyboardMarkup(inline_keyboard)
     await message.reply_text(
-        "Check [Pinned Message](https://t.me/Torrent_leeching/109) For Any Help",
+        "Please Read The Pinned Message For Any Help",
         quote=True,
         reply_markup=reply_markup
     )
