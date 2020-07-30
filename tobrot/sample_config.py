@@ -34,7 +34,7 @@ class Config(object):
     # add offensive API
     TG_OFFENSIVE_API = os.environ.get("TG_OFFENSIVE_API", None)
     CUSTOM_FILE_NAME = os.environ.get("CUSTOM_FILE_NAME", "")
-    LEECH_COMMAND = os.environ.get("LEECH_COMMAND", "leech")
+    LEECH_COMMAND = os.environ.get("LEECH_COMMAND", "leech2file")
     YTDL_COMMAND = os.environ.get("YTDL_COMMAND", "ytdl")
     RCLONE_CONFIG = os.environ.get("RCLONE_CONFIG", "")
     DESTINATION_FOLDER = os.environ.get("DESTINATION_FOLDER", "TorrentLeech-Gdrive")
@@ -44,5 +44,5 @@ class Config(object):
     CANCEL_COMMAND_G = os.environ.get("CANCEL_COMMAND_G", "cancel")
     GET_SIZE_G = os.environ.get("GET_SIZE_G", "getsize")
     STATUS_COMMAND = os.environ.get("STATUS_COMMAND", "status")
-    SAVE_THUMBNAIL = os.environ.get("SAVE_THUMBNAIL", "savethumbnail")
-    CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "clearthumbnail")
+    SAVE_THUMBNAIL = os.environ.get("SAVE_THUMBNAIL", "savethumb")
+    CLEAR_THUMBNAIL = os.environ.get("CLEAR_THUMBNAIL", "clearthumb")
