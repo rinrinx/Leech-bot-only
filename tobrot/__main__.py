@@ -135,17 +135,17 @@ if __name__ == "__main__" :
     )
     app.add_handler(help_text_handler)
     #
-    new_join_handler = MessageHandler(
-        new_join_f,
-        filters=~Filters.chat(chats=AUTH_CHANNEL)
-    )
+    #new_join_handler = MessageHandler(
+        #new_join_f,
+        #filters=~Filters.chat(chats=AUTH_CHANNEL)
+    #)
     app.add_handler(new_join_handler)
     #
-    group_new_join_handler = MessageHandler(
-        help_message_f,
-        filters=Filters.chat(chats=AUTH_CHANNEL) & Filters.new_chat_members
-    )
-    app.add_handler(group_new_join_handler)
+    #group_new_join_handler = MessageHandler(
+        #help_message_f,
+        #filters=Filters.chat(chats=AUTH_CHANNEL) & Filters.new_chat_members
+    #)
+    #app.add_handler(group_new_join_handler)
     #
     call_back_button_handler = CallbackQueryHandler(
         button
