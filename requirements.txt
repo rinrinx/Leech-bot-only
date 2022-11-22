@@ -5,5 +5,3 @@ hachoir
 Pillow
 pySmartDL
 tgcrypto
-git+https://github.com/cyrus-op/ytdl
-https://github.com/cyrus-op/pyrogram/archive/asyncio.zip
