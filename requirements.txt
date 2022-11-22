@@ -1,3 +1,4 @@
+pyrogram==1.4.4
 aiohttp
 aria2p
 hachoir
