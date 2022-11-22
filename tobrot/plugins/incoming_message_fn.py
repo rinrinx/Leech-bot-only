@@ -65,7 +65,7 @@ async def incoming_message_f(client, message):
         # start the aria2c daemon
         aria_i_p = await aria_start()
         LOGGER.info(aria_i_p)
-        current_user_id = message.from_user.id
+        current_user_id = message.from_user
         # create an unique directory
         new_download_location = os.path.join(
             DOWNLOAD_LOCATION,
