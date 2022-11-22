@@ -11,6 +11,7 @@ class Config(object):
     AUTH_CHANNEL = set(int(x) for x in os.environ.get("AUTH_CHANNEL", "-1001858175451").split())
     # the download location, where the HTTP Server runs
     DOWNLOAD_LOCATION = "./DOWNLOADS"
+    DESTINATION_FOLDER = "/DOWNLOADS"
     # Telegram maximum file upload size
     MAX_FILE_SIZE = 50000000
     TG_MAX_FILE_SIZE = 2097152000
